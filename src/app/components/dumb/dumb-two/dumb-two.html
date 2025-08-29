@@ -1,0 +1,14 @@
+<div class="dumb-two">
+  <h3>Lista Editable</h3>
+  <div class="input-group">
+    <input [(ngModel)]="newItem" placeholder="Nuevo item">
+    <button class="add" (click)="addItem()">Agregar</button>
+    <button class="sort" (click)="toggleSort()">Ordenar {{ ascending ? 'Desc' : 'Asc' }}</button>
+  </div>
+  <ul>
+    <li *ngFor="let item of listItems; let i = index">
+      <span>{{ item }}</span>
+      <button (click)="removeItem(i)">Eliminar</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,91 @@
+.dumb-two {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+
+  h3 {
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    input {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      box-shadow: inset 4px 4px 12px rgba(0,0,0,0.05), inset -4px -4px 12px #ffffff;
+      transition: all 0.3s;
+
+      &:focus {
+        box-shadow: inset 4px 4px 14px rgba(0,0,0,0.08), inset -4px -4px 14px #ffffff;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 15px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.add { background: #60a5fa80; color: #1e3a8a; }
+      &.sort { background: #facc1580; color: #78350f; }
+
+      &:hover {
+        transform: translateY(-2px) scale(1.07);
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.08), -4px -4px 12px #ffffff;
+      transition: all 0.25s;
+
+      &:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      button {
+        background: #ef4444cc;
+        color: white;
+        border: none;
+        padding: 6px 14px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.08);
+          background: #dc2626cc;
+        }
+      }
+    }
+  }
+}

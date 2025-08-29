@@ -1,0 +1,35 @@
+<div class="smart-parent">
+  <h2>Smart Parent Component</h2>
+
+  <!-- DumbOne -->
+  <app-dumb-one
+    title="Contador Límite"
+    description="Haz clic hasta el límite"
+    [maxClicks]="5"
+    (limitReached)="onDumbOneLimit($event)">
+  </app-dumb-one>
+
+  <!-- DumbTwo -->
+  <app-dumb-two
+    [listItems]="dumbTwoItems"
+    (listChange)="onDumbTwoChange($event)">
+  </app-dumb-two>
+
+  <!-- DumbThree -->
+  <app-dumb-three
+    [step]="2"
+    [multipleCheck]="4"
+    (multipleReached)="onDumbThreeMultiple($event)">
+  </app-dumb-three>
+
+  <!-- Mensajes -->
+  <div class="messages">
+    <h3>Eventos del SmartParent</h3>
+    <ul>
+      <li *ngFor="let msg of messages">{{ msg }}</li>
+    </ul>
+    <p *ngIf="lastMultiple !== null" class="last-multiple">
+      Último múltiplo registrado: {{ lastMultiple }}
+    </p>
+  </div>
+</div>
